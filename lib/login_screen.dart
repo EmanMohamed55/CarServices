@@ -1,5 +1,5 @@
 import 'package:car_zone/sgin_in_screen.dart';
-import 'package:car_zone/sochial.dart';
+import 'package:car_zone/google.dart';
 import 'package:car_zone/util.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -48,7 +48,7 @@ class _logincreenState extends State<logincreen> {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 36, vertical: 12),
+                      const EdgeInsets.symmetric(horizontal: 36, vertical: 10),
                   child: Text(
                     'Create an Account!',
                     style: TextStyle(
@@ -225,35 +225,35 @@ class _logincreenState extends State<logincreen> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 60),
+                  padding: EdgeInsets.symmetric(horizontal: 30),
                   child: Row(
                     children: [
                       Column(
                         children: [
                           Container(
                               margin: EdgeInsets.symmetric(
-                                  horizontal: 17, vertical: 8),
-                              child: ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                      primary: Colors.transparent,
-                                      elevation: 0),
-                                  onPressed: () {},
-                                  child: Image.asset(
-                                      'assets/images/facebook.png'))),
+                                  horizontal: 17, vertical: 4),
+                              child: TextButton(onPressed: (){
+
+                              },
+                                child: Image.asset(
+                                    'assets/images/facebook.png'),
+                              )),
                         ],
                       ),
                       Column(
                         children: [
                           Container(
                               margin: EdgeInsets.symmetric(
-                                  horizontal: 20, vertical: 8),
-                              child: Image.asset('assets/images/twitter.png')),
+                                  horizontal: 20, vertical: 4),
+                              child: TextButton(onPressed: (){},
+                                  child: Image.asset('assets/images/twitter.png'))),
                         ],
                       ),
                       Column(
                         children: [
                           Container(
-                              margin: EdgeInsets.symmetric(vertical: 8),
+                              margin: EdgeInsets.symmetric(vertical: 4),
                               child: TextButton(onPressed: (){
                              Navigator.pushNamed(context, SignInDemo.routeName);
                               },

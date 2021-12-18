@@ -107,10 +107,10 @@ var formkey=GlobalKey<FormState>();
                   },
                   ),
                 ),
-                Container(
-                    margin: EdgeInsets.symmetric(horizontal:45,vertical: 6),
-                    child: Text('forget password?',style: TextStyle(fontSize: 14,
-                    ),)),
+                // Container(
+                //     margin: EdgeInsets.symmetric(horizontal:45,vertical: 6),
+                //     child: Text('forget password?',style: TextStyle(fontSize: 14,
+                //     ),)),
 
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 4),

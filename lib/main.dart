@@ -2,7 +2,7 @@
 import 'package:car_zone/home_page.dart';
 import 'package:car_zone/login_screen.dart';
 import 'package:car_zone/sgin_in_screen.dart';
-import 'package:car_zone/sochial.dart';
+import 'package:car_zone/google.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
