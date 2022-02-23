@@ -1,4 +1,5 @@
 
+import 'package:car_zone/category.dart';
 import 'package:car_zone/home_page.dart';
 import 'package:car_zone/login_screen.dart';
 import 'package:car_zone/sgin_in_screen.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget{
          sginin.routeName:(buildcontext)=>sginin(),
          homepage.routeName:(buildcontext)=>homepage(),
          SignInDemo.routeName:(buildcontext)=>SignInDemo(),
+
 
        },
         initialRoute: logincreen.routeName,
