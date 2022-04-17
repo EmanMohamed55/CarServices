@@ -8,6 +8,7 @@ class category extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body:   Container(
+        margin:EdgeInsets.symmetric(vertical: 38),
         //padding:EdgeInsets.symmetric(horizontal:20,vertical: 20),
         child:
         Column(
@@ -19,33 +20,37 @@ class category extends StatelessWidget {
 
                 child: Container(
 
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Expanded( child: Image.asset('assets/images/logocaricon.png',width:174,height:51.5,)),
-                      Expanded(
-                        flex: 4,
-                        child:
-                        TextField(
-                          style:TextStyle(height:0),
-                          decoration: new InputDecoration(
-                            prefixIcon:(Icon(Icons.search)),
-                            enabledBorder: const OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(15)),
-                              borderSide: const BorderSide(
-                                color: Colors.grey,
+                  child: SingleChildScrollView(
+
+                  
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded( child: Image.asset('assets/images/logocaricon.png',width:174,height:51.5,)),
+                        Expanded(
+                          flex: 4,
+                          child:
+                          TextField(
+                            style:TextStyle(height:0),
+                            decoration: new InputDecoration(
+                              prefixIcon:(Icon(Icons.search)),
+                              enabledBorder: const OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(15)),
+                                borderSide: const BorderSide(
+                                  color: Colors.grey,
+                                ),
                               ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                              borderSide: BorderSide(color: Colors.grey),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Expanded(child: Image.asset('assets/images/righticon.png',width:174,height:51.5,)),
-                    ],
+                        Expanded(child: Image.asset('assets/images/righticon.png',width:174,height:51.5,)),
+                      ],
 
+                    ),
                   ),
 
                 ),
@@ -69,126 +74,156 @@ class category extends StatelessWidget {
                                   crossAxisAlignment:CrossAxisAlignment.stretch,
 
                                   children: [
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                        children: [
-                                Container(padding:EdgeInsets.all(15),
-                                   width:160,
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                          children: [
+                                Container(padding:EdgeInsets.all(10),
+                                   width:130,
                                    height:75 ,
-                                     child: ElevatedButton(
+                                       child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    shape: new RoundedRectangleBorder(
-                                      borderRadius:BorderRadius.circular(10)
-                                    ),
+                                      shape: new RoundedRectangleBorder(
+                                        borderRadius:BorderRadius.circular(10)
+                                      ),
                                   ),
                                   onPressed:null,
                                   child:  Text('For You',textAlign:TextAlign.center,
-                                    style:TextStyle(
-                                      fontSize:16,
-                                      fontWeight:FontWeight.bold,
-                                      color:Color.fromARGB(255, 63, 69, 82) ,
+                                      style:TextStyle(
+                                        fontSize:16,
+                                        fontWeight:FontWeight.bold,
+                                        color:Color.fromARGB(255, 63, 69, 82) ,
 
-                                    ),),
+                                      ),),
                                 ),
                               ),
-                                        ],
+                                          ],
+                                      ),
                                     ),
 
 
 
                                     Container(
-                                       
-                                       child: Row(
-                                         mainAxisAlignment:MainAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                            color:Color.fromARGB(255, 6, 165, 244) ,
+
+                                       child: SingleChildScrollView(
+                                         scrollDirection: Axis.horizontal,
+                                         child: Row(
+                                           mainAxisAlignment:MainAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              color:Color.fromARGB(255, 6, 165, 244) ,
+                                              height:80,
+                                              width:4,
+                                            ),
+
+                                            Container(
+                                              color:Colors.transparent,
+                                              child:SizedBox(
+                                            width:130 ,
                                             height:80,
-                                            width:4,
+                                            child:
+                                            RaisedButton(
+
+                                              colorBrightness:Brightness.light,
+                                              child:  Text( 'New Car',textAlign:TextAlign.center,
+                                                style:TextStyle(
+                                                  fontSize:16,
+                                                  fontWeight:FontWeight.bold,
+                                                  color:Color.fromARGB(255, 6, 165, 244) ,
+
+                                                ),),
+                                              color:Colors.white,
+
+                                              elevation: 0,
+                                              onPressed: () {},
+                                            ),
                                           ),
-                                          
-                                          Container(
-                                            color:Colors.transparent,
-                                            child:SizedBox(
-                                          width:160 ,
-                                          height:80,
-                                          child:
-                                          RaisedButton(
-
-                                            colorBrightness:Brightness.light,
-                                            child:  Text( 'New Car',textAlign:TextAlign.center,
-                                              style:TextStyle(
-                                                fontSize:16,
-                                                fontWeight:FontWeight.bold,
-                                                color:Color.fromARGB(255, 6, 165, 244) ,
-
-                                              ),),
-                                            color:Colors.white,
-
-                                            elevation: 0,
-                                            onPressed: () {},
-                                          ),
-                                        ),
                                       ),
+                                          ],
+                                      ),
+                                       ),
+                                    ),
+
+
+
+
+
+
+
+
+
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                          ButtonText('Store'),
                                         ],
                                       ),
                                     ),
-
-
-
-
-
-
-
-
-
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                      children: [
-                                        ButtonText('Store'),
-                                      ],
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                          ButtonText('Car Agencies'),
+                                        ],
+                                      ),
                                     ),
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                      children: [
-                                        ButtonText('Car Agencies'),
-                                      ],
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                          ButtonText('Old Car'),
+                                        ],
+                                      ),
                                     ),
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                      children: [
-                                        ButtonText('Old Car'),
-                                      ],
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                          ButtonText('rescue winch'),
+                                        ],
+                                      ),
                                     ),
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                      children: [
-                                        ButtonText('rescue winch'),
-                                      ],
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                          ButtonText('Selling a car'),
+                                        ],
+                                      ),
                                     ),
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                      children: [
-                                        ButtonText('Selling a car'),
-                                      ],
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                          ButtonText('Compare'),
+                                        ],
+                                      ),
                                     ),
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                      children: [
-                                        ButtonText('Compare'),
-                                      ],
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                          ButtonText('Services'),
+                                        ],
+                                      ),
                                     ),
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                      children: [
-                                        ButtonText('Services'),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                      children: [
-                                        ButtonText('Price Movement'),
-                                      ],
+                                    SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
+                                        children: [
+                                          ButtonText('Price Movement'),
+                                        ],
+                                      ),
                                     ),
                                   ],
                         ),
@@ -226,30 +261,39 @@ class category extends StatelessWidget {
                                     Text('New Car',style:TextStyle(fontSize:16,fontWeight:FontWeight.bold))
                                   ),
                                   Container(
-                                    child: Row(
-                                      children: [
-                                        Buttons('assets/images/BMW.png'),
-                                        Buttons('assets/images/VOLKA.png'),
-                                        Buttons('assets/images/MRCEDS.png'),
-                                      ],
+                                    child: SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        children: [
+                                          Buttons('assets/images/BMW.png'),
+                                          Buttons('assets/images/VOLKA.png'),
+                                          Buttons('assets/images/MRCEDS.png'),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Container(
-                                    child: Row(
-                                       children: [
-                                         Buttons('assets/images/HYUNDI.png'),
-                                         Buttons('assets/images/AUDI.png'),
-                                         Buttons('assets/images/Nissan.png'),
-                                      ],
+                                    child: SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                         children: [
+                                           Buttons('assets/images/HYUNDI.png'),
+                                           Buttons('assets/images/AUDI.png'),
+                                           Buttons('assets/images/Nissan.png'),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Container(
-                                    child: Row(
-                                       children: [
-                                         Buttons('assets/images/Proton.png'),
-                                         Buttons('assets/images/Seat.png'),
-                                         Buttons('assets/images/Toyota.png'),
-                                      ],
+                                    child: SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                         children: [
+                                           Buttons('assets/images/Proton.png'),
+                                           Buttons('assets/images/Seat.png'),
+                                           Buttons('assets/images/Toyota.png'),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                   Container(

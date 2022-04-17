@@ -11,7 +11,7 @@ Buttons(this.image);
      return Container(
        color:Colors.transparent,
        child:SizedBox(
-         width:120 ,
+         width:90 ,
          height:100,
          child:
          RaisedButton(

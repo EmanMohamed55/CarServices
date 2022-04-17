@@ -9,7 +9,7 @@ class ButtonText extends StatelessWidget{
     return
       Container(
         padding:EdgeInsets.all(15),
-        width:160,
+        width:130,
         height:115 ,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
