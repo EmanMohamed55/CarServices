@@ -27,6 +27,7 @@ var formkey=GlobalKey<FormState>();
         child: Container(
           width:double.infinity,
           child: SingleChildScrollView(
+
             child: Column(
 
               crossAxisAlignment: CrossAxisAlignment.start,

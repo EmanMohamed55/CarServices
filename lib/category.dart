@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 class category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return
+      Scaffold(
       body:   Container(
         margin:EdgeInsets.symmetric(vertical: 38),
         //padding:EdgeInsets.symmetric(horizontal:20,vertical: 20),
@@ -153,16 +154,7 @@ class category extends StatelessWidget {
 
 
 
-                                    SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                        children: [
-                                          ButtonText('Store'),
-                                        ],
-                                      ),
-                                    ),
-                                    SingleChildScrollView(
+                                     SingleChildScrollView(
                                       scrollDirection: Axis.horizontal,
                                       child: Row(
                                         mainAxisAlignment:MainAxisAlignment.spaceAround,
@@ -216,16 +208,7 @@ class category extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    SingleChildScrollView(
-                                      scrollDirection: Axis.horizontal,
-                                      child: Row(
-                                        mainAxisAlignment:MainAxisAlignment.spaceAround,
-                                        children: [
-                                          ButtonText('Price Movement'),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
+                                   ],
                         ),
                               )
                     ),

@@ -1,3 +1,5 @@
+import 'package:car_zone/car_service.dart';
+import 'package:car_zone/service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -9,8 +11,11 @@ class homepagewidget extends StatelessWidget{
     return Scaffold(
       body: Container(
         margin: EdgeInsets.symmetric(vertical: 38),
+
         child: Column(
+
           children: [
+            //////////// search part ///////
             Expanded(
 
               flex:0,
@@ -48,17 +53,21 @@ class homepagewidget extends StatelessWidget{
 
               ),
             ),
-            Expanded(child: Container(
+
+
+            Expanded(
+                child: Container(
 
               child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-
+                scrollDirection:Axis.horizontal,
                 child: Row(
 
                   children: [
                     TextButton(
 
-                      onPressed: (){},
+                      onPressed: (){
+                        Navigator.pushNamed(context,car_service.routeName);
+                      },
                       child: Container(
                         margin: EdgeInsets.all(10),
                         child: Column(
@@ -80,7 +89,7 @@ class homepagewidget extends StatelessWidget{
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text('car''\n' 'service',textAlign: TextAlign.center,)
+                                  Text('car''\n' 'service',textAlign: TextAlign.center)
                                 ],
                               ),
                             ),
